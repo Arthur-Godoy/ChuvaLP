@@ -4,7 +4,14 @@ $orange: #ED7839;
 $borders: 2px solid #E7E7E7;
 
 body{
+    width: 100%;
+    overflow: hidden;
     font-family: $robotoFont;
+}
+.container{
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
 }
 .active{
     border-left: 5px;
@@ -13,14 +20,14 @@ body{
     border-image:linear-gradient(to bottom, #FFB455 0%, #ED7839 100%) 1 100%;
     border-bottom: $borders;
 }
-
 .sidebar{
-    width: 235px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    max-width: 240px;
 }
-
 nav{
-    width: 100%; 
+    width: 220px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     .logo{
         width: 220px;
         height: 68px;
@@ -41,15 +48,38 @@ nav{
             border-bottom: $borders;
             width: 220px;
             padding-left: 24px;
+            &:last-of-type{
+                border-top: $borders;
+            }
             a{
                 font-weight: 500;
-                line-height: 19px;
-                width: 400px;
+                line-height: 30px;
                 font-size: 15px;
                 font-family: $quickSandFont;
                 color: #725C5C;
             }
         } 
     }
-    
+}
+
+header{
+    min-width:calc(100% - 240px);
+    background-color:#FDF1EB;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    height: 68px;
+    h2{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 5px;
+        color: #725C5C;
+    }
+
+    p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #725C5C;
+    }
 }

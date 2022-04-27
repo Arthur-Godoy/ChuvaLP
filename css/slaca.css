@@ -1,5 +1,13 @@
 body {
+  width: 100%;
+  overflow: hidden;
   font-family: "Roboto";
+}
+
+.container {
+  min-width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .active {
@@ -11,12 +19,14 @@ body {
 }
 
 .sidebar {
-  width: 235px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  max-width: 240px;
 }
 
 nav {
-  width: 100%;
+  width: 220px;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 nav .logo {
   width: 220px;
@@ -40,12 +50,35 @@ nav ul li {
   width: 220px;
   padding-left: 24px;
 }
+nav ul li:last-of-type {
+  border-top: 2px solid #E7E7E7;
+}
 nav ul li a {
   font-weight: 500;
-  line-height: 19px;
-  width: 400px;
+  line-height: 30px;
   font-size: 15px;
   font-family: "Quicksand";
+  color: #725C5C;
+}
+
+header {
+  min-width: calc(100% - 240px);
+  background-color: #FDF1EB;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  height: 68px;
+}
+header h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 5px;
+  color: #725C5C;
+}
+header p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
   color: #725C5C;
 }
 
