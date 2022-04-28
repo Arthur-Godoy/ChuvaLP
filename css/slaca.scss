@@ -3,9 +3,9 @@ $quickSandFont: 'Quicksand';
 $orange: #ED7839;
 $borders: 2px solid #E7E7E7;
 
+
 body{
     width: 100%;
-    overflow: hidden;
     font-family: $robotoFont;
 }
 .container{
@@ -20,16 +20,13 @@ body{
     border-image:linear-gradient(to bottom, #FFB455 0%, #ED7839 100%) 1 100%;
     border-bottom: $borders;
 }
-.sidebar{
-    max-width: 240px;
-}
+
 nav{
-    width: 220px;
+    min-width: 220px;
     margin: 0;
     padding: 0;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     .logo{
-        width: 220px;
         height: 68px;
         text-align: center;
         background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
@@ -41,15 +38,17 @@ nav{
         line-height: 68px;
     }
     ul{
+        min-width: 220px;
         margin: 0px;
         padding: 0px;
         list-style: none;
         li{
+            min-width: 220px;
             border-bottom: $borders;
-            width: 220px;
             padding-left: 24px;
             &:last-of-type{
                 border-top: $borders;
+                border-bottom: none;
             }
             a{
                 font-weight: 500;
@@ -57,29 +56,104 @@ nav{
                 font-size: 15px;
                 font-family: $quickSandFont;
                 color: #725C5C;
+                &:hover{
+                    color: orange;
+                    text-decoration: none;
+                    font-size: 16px;
+                }
             }
         } 
     }
 }
 
 header{
-    min-width:calc(100% - 240px);
     background-color:#FDF1EB;
     padding-top: 5px;
     padding-bottom: 2px;
-    height: 68px;
     h2{
+        margin: 0px;
         font-style: normal;
         font-weight: 400;
         font-size: 22px;
-        line-height: 5px;
         color: #725C5C;
     }
-
     p{
         font-weight: 400;
         font-size: 14px;
         line-height: 16px;
         color: #725C5C;
     }
+    .globeimage{
+        position: relative;
+        top: -2px;
+    }
+    .button{
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 8px;
+        border-radius: 3px;
+        border: 1px solid #CCCCCC;
+        background-color: #FDF1EB;
+        p{
+            font-family: $quickSandFont;
+            color: #333333;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+    .dropdown-menu{
+        background-color: #FDF1EB;
+    }
+    .profileText{
+        position: relative;
+        left: 30%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-family: $quickSandFont;
+        width: 70%;
+        text-align: right;
+        p{
+            &:first-of-type{
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+            }
+            &:nth-child(2){
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+    }
+    .profilePhoto{
+        z-index: 2;
+        vertical-align: top;
+        position: relative;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+    .notifications{
+        position: absolute;
+        top: 30%;
+        left: 75%;
+        z-index: 3;
+        background: #F85959;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        color:white;
+        text-align: center;
+        vertical-align: middle;
+        padding-right: 2px;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+    }
 }
+
+
+
