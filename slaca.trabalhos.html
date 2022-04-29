@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c1600a39e6.js" crossorigin="anonymous"></script>
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,7 +20,7 @@
                     <div class="logo">
                         <h1>SLACA 2019</h1>
                     </div>
-                    <img src="assets/logo.png" alt="logo slaca">
+                    <img class="img-fluid d-none d-md-block" src="assets/logo.png" alt="logo slaca">
                     <ul class="margin-0">
                         <li><a href="">Apresentação</a></li>
                         <li><a href="">Comitês</a></li>
@@ -32,14 +33,14 @@
             </div> 
             <div class="rightSide col-lg-10 col-md-12">
                 <header class="row mt-0 pt-0">
-                    <div class="col-8">
+                    <div class="col-lg-8 col-md-12">
                         <p class="mt-2 mb-1">Anais do Simpósio Latino Americano de Ciências de Alimentos</p>
                         <h2>Anais do 13º Simpósio Latino Americano de Ciência de Alimentos </h2>
                         <p class="mb-0">ISSN: 1234-5678</p> 
                     </div>
-                    <div class="col-4 row p-0 m-0">
-                        <div class="dropdown h-100 w-50 d-inline col-2">
-                            <button class="button dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="col-lg-4 col-md-12  row p-0 m-0">
+                        <div class="order-2 order-md-1 dropdown h-100 w-50 d-inline col-md-2 col-sm-6">
+                            <button class="langButton dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="globeimage" src="assets/language image.png" alt=""><p class="d-inline">PT-BR</p>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -47,7 +48,7 @@
                                 <a class="dropdown-item" href="#">ES, AR</a>
                             </div>
                         </div>
-                        <div class="d-inline col-10">
+                        <div class="order-1 order-md-2 d-inline col-md-10 col-sm-6">
                             <div class="profileText d-inline-block">
                                 <p class="p-0 m-0">Bem vindo!</p>
                                 <p class="email m-0">alguem12@galoascience.com</p>
@@ -59,6 +60,47 @@
                         </div>
                     </div>
                 </header>
+                <section class="content row pl-3 pt-4">
+                    <div class="col-md-9">
+                        <h2>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h2>
+                    </div>
+                    <div class="buttonsRight col-md-3">
+                        <button class="btn btn-danger border-0"><i class="fa-solid fa-download pr-2"></i>Download</button>
+                        <button class="btn btn-danger border-0"><i class="fa-solid fa-star"></i></button>
+                        <button class="btn btn-danger border-0"><img src="assets/doi.png" alt=""></button>
+                        <p>COMO CITAR ESSE TRABALHO?</p>
+                    </div>
+                    <div class="video col-md-12 col-lg-9 d-md-flex">
+                        <span class="videoOverlay hide">
+                            <h3 class="hide">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP </h3>
+                            <img class="hide" src="assets/profile.png" alt="foto Beatriz">
+                            <div class="hide"">
+                                <h4>Beatriz Christiane Melo</h4>
+                                <h5>FCA / Universidade Estadual de Campinas</h5>
+                            </div>
+                        </span>
+                        <img class="img-fluid" src="assets/video.png" alt="video">
+                    </div>
+                    <div class="panelContainer col-md-12 col-lg-3 pr-3 mt-3 mt-lg-0">
+                        <div class="rightPanel">
+                            <h4>Detalhes</h4>
+                            <div class="details">
+                                <p>Tipo de Apresentação: <b>Pôster</b></p>
+                                <p>Eixo temático: <b>Alimentação e saúde (AS)</b></p>
+                                <p>Palavras-chaves: <b>Alimentos funcionais, alimentação escolar.</b></p>
+                                <p class="authors"><b>Autores:</b></p>
+                                <p class="authors">Galileo Galilei¹</p>
+                                <p class="authors">Berta Lange de Morretes²</p>
+                                <p class="authors">Cesar Lattes¹</p>
+                                <p class="authors">Stephen Hawking⁴</p>
+                                <p class="references">¹Universidade Estadual de Campinas</p>
+                                <p class="references">²Universidade de São Paulo</p>
+                                <p class="references">³Instituto Nacional de Pesquisas Espaciais</p>
+                                <p class="references">⁴Universidade Federal do Rio de Janeiro</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
