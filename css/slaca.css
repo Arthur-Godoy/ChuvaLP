@@ -18,7 +18,7 @@ body {
 }
 
 nav {
-  min-width: 220px;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -35,19 +35,16 @@ nav h1 {
   line-height: 68px;
 }
 nav ul {
-  min-width: 220px;
   margin: 0px;
   padding: 0px;
   list-style: none;
 }
 nav ul li {
-  min-width: 220px;
   border-bottom: 2px solid #E7E7E7;
   padding-left: 24px;
 }
 nav ul li:last-of-type {
   border-top: 2px solid #E7E7E7;
-  border-bottom: none;
 }
 nav ul li a {
   font-weight: 500;
@@ -72,6 +69,7 @@ header h2 {
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
+  letter-spacing: 0.05em;
   color: #725C5C;
 }
 header p {
@@ -84,16 +82,33 @@ header .globeimage {
   position: relative;
   top: -2px;
 }
-header .button {
+header .langButton {
   position: relative;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   padding: 8px;
   border-radius: 3px;
   border: 1px solid #CCCCCC;
   background-color: #FDF1EB;
 }
-header .button p {
+@media only screen and (max-width: 992px) {
+  header .langButton {
+    left: 110%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header .langButton {
+    left: 40%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  header .langButton {
+    top: 15%;
+    left: 110%;
+  }
+}
+header .langButton p {
   font-family: "Quicksand";
   color: #333333;
   font-weight: 400;
@@ -105,12 +120,18 @@ header .dropdown-menu {
 }
 header .profileText {
   position: relative;
-  left: 30%;
+  left: 40%;
   top: 50%;
   transform: translate(-50%, -50%);
   font-family: "Quicksand";
   width: 70%;
   text-align: right;
+}
+@media only screen and (max-width: 575px) {
+  header .profileText {
+    top: 50%;
+    left: 20%;
+  }
 }
 header .profileText p:first-of-type {
   font-weight: 400;
@@ -127,14 +148,20 @@ header .profilePhoto {
   vertical-align: top;
   position: relative;
   top: 50%;
-  left: 75%;
+  left: 85%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+}
+@media only screen and (max-width: 575px) {
+  header .profilePhoto {
+    top: 50%;
+    left: 60%;
+  }
 }
 header .notifications {
   position: absolute;
   top: 30%;
-  left: 75%;
+  left: 84.5%;
   z-index: 3;
   background: #F85959;
   border-radius: 50%;
@@ -147,6 +174,169 @@ header .notifications {
   font-weight: 700;
   font-size: 10px;
   line-height: 12px;
+}
+@media only screen and (max-width: 575px) {
+  header .notifications {
+    left: 60.8%;
+  }
+}
+
+.content h2 {
+  color: #ED7839;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+}
+.content .buttonsRight button {
+  margin-right: 4px;
+  min-height: 31px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+  background-color: #ED7839;
+  padding: 0px 11px;
+  border-radius: 4px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1210px) {
+  .content .buttonsRight button:last-of-type {
+    margin-top: 5px;
+  }
+}
+.content .buttonsRight p {
+  margin-top: 12px;
+  color: #ED7839;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+}
+
+.video {
+  max-height: 439px;
+}
+
+.videoOverlay {
+  padding: 35px;
+  position: absolute;
+  z-index: 99;
+  width: 784px;
+  min-height: 100%;
+  font-weight: 900;
+  color: white;
+  background: rgba(141, 53, 6, 0.5);
+}
+@media only screen and (max-width: 1322px) {
+  .videoOverlay {
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .videoOverlay {
+    width: 784px;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .videoOverlay {
+    width: 96.3%;
+  }
+}
+@media only screen and (max-width: 675px) {
+  .videoOverlay {
+    width: 95.3%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .videoOverlay {
+    width: 92%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .videoOverlay {
+    width: 91%;
+  }
+}
+.videoOverlay h3 {
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  font-weight: 900;
+}
+.videoOverlay img {
+  position: absolute;
+  top: 63%;
+  border: 1px solid #ED7839;
+  border-radius: 50%;
+  padding: 4px;
+}
+.videoOverlay div {
+  position: absolute;
+  left: 17%;
+  top: 68%;
+}
+.videoOverlay div h4 {
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 25px;
+}
+.videoOverlay div h5 {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 25px;
+}
+@media only screen and (max-width: 740px) {
+  .videoOverlay .hide {
+    display: none;
+  }
+}
+
+.panelContainer {
+  padding-left: 0px;
+  padding-right: 45px;
+  margin-left: 0px;
+}
+
+.rightPanel {
+  padding: 0;
+  border: 1px solid #ECECEC;
+  border-radius: 5px;
+}
+.rightPanel h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  color: #4E4E4E;
+  padding: 15px;
+  background-color: #FDF1EB;
+}
+.rightPanel .details {
+  font-family: "Quicksand";
+  padding: 5px 15px;
+  color: #5C5C5C;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+}
+.rightPanel .details p {
+  margin: 5px;
+  padding: 0;
+}
+.rightPanel .details p:nth-child(4) {
+  margin-top: 25px;
+}
+.rightPanel .details p:nth-child(8) {
+  margin-bottom: 40px;
+}
+.rightPanel .details .authors {
+  margin: 10px;
+  font-size: 15px;
+}
+.rightPanel .details .references {
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
+  color: #a09a9a;
 }
 
 /*# sourceMappingURL=slaca.css.map */
