@@ -96,4 +96,3 @@ const showAnswers = (key) =>{
 }
 
 showQuestions()
-document.getElementById('answer'+key).style = "display: none"
