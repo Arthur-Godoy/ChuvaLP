@@ -297,12 +297,12 @@ header .notifications {
   margin-left: 0px;
 }
 
-.rightPanel {
+.card {
   padding: 0;
   border: 1px solid #ECECEC;
   border-radius: 5px;
 }
-.rightPanel h4 {
+.card h4 {
   font-weight: 700;
   font-size: 20px;
   line-height: 25px;
@@ -310,33 +310,174 @@ header .notifications {
   padding: 15px;
   background-color: #FDF1EB;
 }
-.rightPanel .details {
+.card h5 {
+  margin-top: 15px;
+  margin-bottom: 27px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ED7839;
+}
+.card h6 {
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #595959;
+  width: 626px;
+}
+.card p {
   font-family: "Quicksand";
   padding: 5px 15px;
   color: #5C5C5C;
   font-size: 12px;
   line-height: 120%;
   letter-spacing: 0.02em;
-}
-.rightPanel .details p {
   margin: 5px;
   padding: 0;
 }
-.rightPanel .details p:nth-child(4) {
+.card .details p:nth-child(4) {
   margin-top: 25px;
 }
-.rightPanel .details p:nth-child(8) {
+.card .details p:nth-child(8) {
   margin-bottom: 40px;
 }
-.rightPanel .details .authors {
+.card .details .authors {
   margin: 10px;
   font-size: 15px;
 }
-.rightPanel .details .references {
+.card .details .references {
   font-size: 10px;
   line-height: 10px;
   font-weight: 400;
-  color: #a09a9a;
+  color: #837f7f;
+}
+.card .resume {
+  text-align: justify;
+}
+.card .resume p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+}
+.card .resume .seeMoreBtn {
+  font-weight: bold;
+  font-family: "Quicksand";
+  background-color: white;
+  border: none;
+  color: #ED7839;
+}
+.card .icons {
+  text-align: center;
+}
+.card .icons img {
+  margin-left: 50px;
+}
+.card .icons img:first-of-type {
+  margin-left: 0px;
+}
+.card .borderBottom {
+  margin-top: 31px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  border-bottom: 2px solid #E7E7E7;
+  border-width: 1px;
+}
+.card .topicBtn {
+  position: relative;
+  left: 50%;
+  top: 77.6%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 4px;
+  width: 133px;
+  height: 35px;
+  background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  font-family: "Quicksand";
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 16px;
+}
+.card .quest {
+  border: 1px solid #E7E7E7;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+.card .quest h5 {
+  margin-bottom: 0;
+  text-align: left;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+.card .quest p {
+  padding: 0;
+  margin-left: 0;
+  color: #757575;
+}
+.card .quest p:first-of-type {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #494949;
+  margin-bottom: 10px;
+}
+.card .quest p:nth-child(3) {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+.card .quest button {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  padding: 0px 8px;
+  border: none;
+  background-color: #ED7839;
+  margin-right: 10px;
+}
+.card .quest .btnElipsis {
+  box-shadow: none;
+  margin-right: 0px;
+  background: none;
+  color: #ED7839;
+}
+.card .answer {
+  font-family: "Quicksand";
+  background-color: white;
+}
+.card .answer p {
+  color: #4D4D4D;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+.card .answer p:first-of-type {
+  font-weight: 700;
+  color: #5C5C5C;
+  font-size: 12px;
+}
+.card .answer p:nth-child(2) {
+  font-weight: 700;
+  color: #ED7839;
+}
+.card .answer .autor {
+  border: 1px solid #E7E7E7;
+  padding: 15px 20px;
+  background-color: #F8F8F8;
+}
+.card .answer .owner {
+  background-color: white;
+  border: 1px solid #E7E7E7;
+  padding: 15px 20px;
 }
 
 /*# sourceMappingURL=slaca.css.map */
