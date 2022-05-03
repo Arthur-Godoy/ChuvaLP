@@ -545,7 +545,8 @@ header .notifications {
   padding-top: 35px;
   text-align: center;
   position: absolute;
-  left: 25px;
+  left: 50%;
+  transform: translate(-50%);
   background: rgba(221, 221, 221, 0.8);
   min-height: 150px;
   width: 95.3%;
