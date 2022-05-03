@@ -66,7 +66,7 @@ const showQuestions = () =>{
             quest.approved ?(
                 document.getElementById('questions').innerHTML =   '<div id="'+questions.indexOf(quest)+'"><div  onclick="showAnswers('+questions.indexOf(quest)+')" class="quest px-3 pb-3 "><h5>'+quest.subject+'</h5><p>'+quest.questionAutor+'</p><p class="mb-2" id="questionText'+questions.indexOf(quest)+'">'+questionText+'</p><button class="btnElipsis"><i class=" fa-solid fa-ellipsis-vertical fa-lg"></i></button><button><i class="fa-solid fa-heart text-white"></i></button><p class="d-inline">'+quest.likes+'Likes</p><p class="d-inline">'+quest.answers.length+'Comment</p></div><div id="answer'+questions.indexOf(quest)+'" class="answer"></div></div>' + document.getElementById('questions').innerHTML
             ):(
-                adsd
+                document.getElementById('questions').innerHTML =   '<div id="'+questions.indexOf(quest)+'"><div  onclick="showAnswers('+questions.indexOf(quest)+')" class="quest px-3 pb-3 "><div class="overlayQuestion"><i class="fa-solid fa-check-double fa-lg d-block"></i><h4>Aguardando feedback dos autores</h4><a href="">Editar topico</a></div><div class="blur"><h5>'+quest.subject+'</h5><p>'+quest.questionAutor+'</p><p class="mb-2" id="questionText'+questions.indexOf(quest)+'">'+questionText+'</p><button class="btnElipsis"><i class=" fa-solid fa-ellipsis-vertical fa-lg"></i></button><button><i class="fa-solid fa-heart text-white"></i></button><p class="d-inline">'+quest.likes+'Likes</p><p class="d-inline">'+quest.answers.length+'Comment</p></div><div id="answer'+questions.indexOf(quest)+'" class="answer"></div></div></div>' + document.getElementById('questions').innerHTML
             )
             document.getElementById(questions.indexOf(quest)).style = "margin-bottom: 15px"
 
@@ -103,6 +103,14 @@ const showAnswers = (key) =>{
     )
 }
 
+const createTopic = () =>{
+    document.getElementById('newTopic').innerHTML = '<h4>Dicussões</h4><h6>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</h6><label class="d-block" for="subjectInput">Assunto</label><input class="d-block" id="subjectInput" type="text" placeholder="Defina um tópico sucinto para notificar os autores"><label class="d-block" for="textInput">Conteúdo</label><textarea class="d-block" id="textInput" cols="10" rows="4"></textarea><div class="textOptions"><button>B</button><button>I</button><button onclick="newTopic()">Enviar</button></div><div class="borderBottom"></div>'
+}
+
+const topicCreatedMss = () =>{
+    document.getElementById('newTopic').innerHTML = '<h4>Dicussões</h4><h5>Seu tópico foi enviado com sucesso! :D</h5><h6>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</h6><button onclick="createTopic()" id="createButton" class="topicBtn">criar novo tópico</button><div class="borderBottom"></div>'
+}
+
 const newTopic = () =>{
     let topic = {
         subject: document.getElementById('subjectInput').value,
@@ -114,5 +122,6 @@ const newTopic = () =>{
     }
     topics[0].push(topic)
     showQuestions()
+    topicCreatedMss()
 }
 showQuestions()
