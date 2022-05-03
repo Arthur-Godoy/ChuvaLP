@@ -8,6 +8,7 @@ const topics = [
             questionAutor: "Carlos Henrique Santos",
             question: "Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo?",
             likes: 3,
+            approved:true,
             answers: [
                 {
                     autor: "Adriano da Silva",
@@ -36,6 +37,7 @@ const topics = [
             questionAutor: "Carlos Henrique Santos",
             question: "Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo?",
             likes: 1,
+            approved:true,
             answers:[]
         }
     ]
@@ -55,13 +57,17 @@ const seeLess = () =>{
 }
 
 const showQuestions = () =>{
+    document.getElementById('questions').innerHTML = ""    
     topics.map((questions) => {
 
         questions.map((quest) =>{
-
             let questionText = quest.question.slice(0,172) + '...'
-            document.getElementById('questions').innerHTML =   '<div id="'+questions.indexOf(quest)+'"><div  onclick="showAnswers('+questions.indexOf(quest)+')" class="quest px-3 pb-3 "><h5>'+quest.subject+'</h5><p>'+quest.questionAutor+'</p><p class="mb-2" id="questionText">'+questionText+'</p><button class="btnElipsis"><i class=" fa-solid fa-ellipsis-vertical fa-lg"></i></button><button><i class="fa-solid fa-heart text-white"></i></button><p class="d-inline">'+quest.likes+'Likes</p><p class="d-inline">'+quest.answers.length+'Comment</p></div><div id="answer'+questions.indexOf(quest)+'" class="answer"></div></div>' + document.getElementById('questions').innerHTML
-
+            display &&(questionText = quest.question)
+            quest.approved ?(
+                document.getElementById('questions').innerHTML =   '<div id="'+questions.indexOf(quest)+'"><div  onclick="showAnswers('+questions.indexOf(quest)+')" class="quest px-3 pb-3 "><h5>'+quest.subject+'</h5><p>'+quest.questionAutor+'</p><p class="mb-2" id="questionText'+questions.indexOf(quest)+'">'+questionText+'</p><button class="btnElipsis"><i class=" fa-solid fa-ellipsis-vertical fa-lg"></i></button><button><i class="fa-solid fa-heart text-white"></i></button><p class="d-inline">'+quest.likes+'Likes</p><p class="d-inline">'+quest.answers.length+'Comment</p></div><div id="answer'+questions.indexOf(quest)+'" class="answer"></div></div>' + document.getElementById('questions').innerHTML
+            ):(
+                adsd
+            )
             document.getElementById(questions.indexOf(quest)).style = "margin-bottom: 15px"
 
             quest.answers.map((answer) => {
@@ -87,13 +93,26 @@ const showAnswers = (key) =>{
     display ? (
         document.getElementById(key).style = "margin-bottom: 15px",
         document.getElementById('answer'+key).style = "display: none",
+        document.getElementById('questionText'+key).innerHTML = topics[0][key].question.slice(0,172) + '...',
         display = false
     ):(
         document.getElementById(key).style = "margin-bottom: 0",
         document.getElementById('answer'+key).style = "display: block;margin-bottom: 10px",
+        document.getElementById('questionText'+key).innerHTML = topics[0][key].question,
         display = true
     )
 }
 
+const newTopic = () =>{
+    let topic = {
+        subject: document.getElementById('subjectInput').value,
+        questionAutor: "Carlos Henrique Santos",
+        question: document.getElementById('textInput').value,
+        likes: 1,
+        approved:false,
+        answers:[]
+    }
+    topics[0].push(topic)
+    showQuestions()
+}
 showQuestions()
-document.getElementById('answer'+key).style = "display: none"
