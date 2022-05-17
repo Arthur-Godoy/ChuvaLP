@@ -1,5 +1,4 @@
-let textMin = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant... <button class="seeMoreBtn" onclick="seeMore()">ver mais</button></p>'
-let textBig = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.<br></br>Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.<br></br>Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat. Donec eleifend vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus maximus dui eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper, efficitur facilisis turpis. Praesent blandit elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar lobortis consectetur non odio. Phasellus at lacus hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci. Quisque sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu maximus massa.<br></br>Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<button class="seeMoreBtn" onclick="seeLess()">ver menos</button><p>'
+let text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.<br></br>Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.<br></br>Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat. Donec eleifend vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus maximus dui eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper, efficitur facilisis turpis. Praesent blandit elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar lobortis consectetur non odio. Phasellus at lacus hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci. Quisque sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu maximus massa.<br></br>Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 
 const topics = [
     questions = [
@@ -43,35 +42,74 @@ const topics = [
     ]
 ]
 
+
+class CardQuestion{
+    constructor(id,subject,autor,text,likes,commentsNumber){
+        this.id = id
+        this.subject = subject
+        this.autor = autor
+        this.text = text
+        this.likes = likes
+        this.commentsNumber = commentsNumber
+    }
+
+    cardHTML(){
+        return ('<div id="'+this.id+'"><div  onclick="showAnswers('+this.id+')" class="quest px-3 pb-3 "><h5>'+this.subject+'</h5><p>'+this.autor+'</p><p class="mb-2" id="questionText'+this.id+'">'+this.text+'</p><button class="btnElipsis"><i class=" fa-solid fa-ellipsis-vertical fa-lg"></i></button><button id="like'+this.id+'" onclick="like('+this.id+')"><i class="fa-solid fa-heart text-white"></i></button><p class="d-inline">'+this.likes+'Likes</p><p class="d-inline">'+this.commentsNumber+'Comment</p></div><div id="answer'+this.id+'" class="answer"></div></div>')
+    }
+
+    cardWaitAprove(){
+        return ('<div id="'+this.id+'"><div  onclick="showAnswers('+this.id+')" class="quest px-3 pb-3 "><div class="overlayQuestion"><i class="fa-solid fa-check-double fa-lg d-block"></i><h4>Aguardando feedback dos autores</h4><a href="">Editar topico</a></div><div class="blur"><h5>'+this.subject+'</h5><p>'+this.autor+'</p><p class="mb-2" id="questionText'+this.id+'">'+this.text+'</p><button class="btnElipsis"><i class=" fa-solid fa-ellipsis-vertical fa-lg"></i></button><button><i class="fa-solid fa-heart text-white"></i></button><p class="d-inline">'+this.likes+'Likes</p><p class="d-inline">'+this.commentsNumber+'Comment</p></div><div id="answer'+this.id+'" class="answer"></div></div></div>')
+    }
+}
+
+class CardAnswer{
+    constructor(cssClass, autor, autorClass, text, display){
+        this.cssClass = cssClass
+        this.autor = autor
+        this.autorClass = autorClass
+        this.text = text
+        this.display = display
+    }
+
+    cardHTML(){
+        return('<div class="'+this.cssClass+' answer"><p class="d-inline">'+this.autor+'</p><p class="'+this.display+' float-right mr-5">'+this.autorClass+'<i class="fa-solid fa-check-double fa-xl"></i></p><p>'+this.text+'</p></div>')
+    }
+}
+
 let display = false
 
-
 const seeMore = () =>{
-    document.getElementById('resumeText').innerHTML = textBig
+    document.getElementById('resumeText').innerHTML = '<p>'+text+'<button class="seeMoreBtn" onclick="seeLess()">ver menos</button></p>'
     document.getElementById('resumeText').style.height = "100%"
 }
 
 const seeLess = () =>{
-    document.getElementById('resumeText').innerHTML = textMin
+    document.getElementById('resumeText').innerHTML = '<p>'+text.slice(0,524)+'...<button class="seeMoreBtn" onclick="seeMore()">ver mais</button></p>'
     document.getElementById('resumeText').style.height = "115px"
 }
 
 const showQuestions = () =>{
     document.getElementById('questions').innerHTML = ""    
     topics.map((questions) => {
-
         questions.map((quest) =>{
             let questionText = quest.question.slice(0,172) + '...'
             display &&(questionText = quest.question)
+            let question = new CardQuestion(questions.indexOf(quest), quest.subject, quest.questionAutor, questionText, quest.likes, quest.answers.length)
             quest.approved ?(
-                document.getElementById('questions').innerHTML =   '<div id="'+questions.indexOf(quest)+'"><div  onclick="showAnswers('+questions.indexOf(quest)+')" class="quest px-3 pb-3 "><h5>'+quest.subject+'</h5><p>'+quest.questionAutor+'</p><p class="mb-2" id="questionText'+questions.indexOf(quest)+'">'+questionText+'</p><button class="btnElipsis"><i class=" fa-solid fa-ellipsis-vertical fa-lg"></i></button><button><i class="fa-solid fa-heart text-white"></i></button><p class="d-inline">'+quest.likes+'Likes</p><p class="d-inline">'+quest.answers.length+'Comment</p></div><div id="answer'+questions.indexOf(quest)+'" class="answer"></div></div>' + document.getElementById('questions').innerHTML
+                document.getElementById('questions').innerHTML = question.cardHTML() + document.getElementById('questions').innerHTML
             ):(
-                document.getElementById('questions').innerHTML =   '<div id="'+questions.indexOf(quest)+'"><div  onclick="showAnswers('+questions.indexOf(quest)+')" class="quest px-3 pb-3 "><div class="overlayQuestion"><i class="fa-solid fa-check-double fa-lg d-block"></i><h4>Aguardando feedback dos autores</h4><a href="">Editar topico</a></div><div class="blur"><h5>'+quest.subject+'</h5><p>'+quest.questionAutor+'</p><p class="mb-2" id="questionText'+questions.indexOf(quest)+'">'+questionText+'</p><button class="btnElipsis"><i class=" fa-solid fa-ellipsis-vertical fa-lg"></i></button><button><i class="fa-solid fa-heart text-white"></i></button><p class="d-inline">'+quest.likes+'Likes</p><p class="d-inline">'+quest.answers.length+'Comment</p></div><div id="answer'+questions.indexOf(quest)+'" class="answer"></div></div></div>' + document.getElementById('questions').innerHTML
+                document.getElementById('questions').innerHTML = question.cardWaitAprove()  + document.getElementById('questions').innerHTML
             )
-            document.getElementById(questions.indexOf(quest)).style = "margin-bottom: 15px"
+            document.getElementById(question.id).style = "margin-bottom: 15px"
+        })
+    })
+    loadAnswers()
+}
 
-            quest.answers.map((answer) => {
-
+const loadAnswers = () =>{
+    topics.map((questions) => {
+        questions.map((quest) =>{
+            quest.answers.map((answer) =>{
                 let cssClass, display
                 answer.autorClass == "Coautor" || answer.autorClass == "Autor" ?(
                     cssClass = "autor",
@@ -80,14 +118,14 @@ const showQuestions = () =>{
                     cssClass = "owner",
                     display = "d-none"
                 )
-
-                document.getElementById('answer'+questions.indexOf(quest)).innerHTML = document.getElementById('answer'+questions.indexOf(quest)).innerHTML +
-                '<div class="'+cssClass+' answer"><p class="d-inline">'+answer.autor+'</p><p class="'+display+' float-right mr-5">'+answer.autorClass+'<i class="fa-solid fa-check-double fa-xl"></i></p><p>'+answer.answer+'</p></div>'
+                let answerText = new CardAnswer(cssClass, answer.autor, answer.autorClass, answer.answer, display)
+                document.getElementById('answer'+questions.indexOf(quest)).innerHTML = document.getElementById('answer'+questions.indexOf(quest)).innerHTML + answerText.cardHTML() 
                 document.getElementById('answer'+questions.indexOf(quest)).style = "display: none"
             })
         })
     })
 }
+
 
 const showAnswers = (key) =>{
     display ? (
@@ -101,6 +139,13 @@ const showAnswers = (key) =>{
         document.getElementById('questionText'+key).innerHTML = topics[0][key].question,
         display = true
     )
+}
+
+const like = (id) =>{
+    topics[0][id].likes++
+    showQuestions()
+    document.getElementById('like'+id).disabled = true
+    document.getElementById('like'+id).style = "color:red"
 }
 
 const createTopic = () =>{
@@ -124,4 +169,6 @@ const newTopic = () =>{
     showQuestions()
     topicCreatedMss()
 }
+
 showQuestions()
+seeLess()
